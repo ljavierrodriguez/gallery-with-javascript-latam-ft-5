@@ -57,12 +57,14 @@ window.onload = function () {
 
     function play() {
         console.log(playing)
+        console.log(idInterval)
         if (playing) {
             playing = false // decimos que no se esta reproduciendo la galeria
             imageDefault = 0 // inicializamos la imagen por defecto a 0
             iconPlay.classList.add('fa-play')
             iconPlay.classList.remove('fa-pause')
             clearInterval(idInterval) // Limpiamos el setInterval
+            idInterval = null
         } else {
             playing = true // indicamos que se esta reproduciendo la galeria
             iconPlay.classList.remove('fa-play')
